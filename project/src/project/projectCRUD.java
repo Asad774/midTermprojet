@@ -16,6 +16,8 @@ public class projectCRUD extends javax.swing.JFrame {
      */
     public projectCRUD() {
         initComponents();
+        setSize(800,510);
+        setLocation(340,130);
     }
 
     /**
@@ -103,7 +105,7 @@ public class projectCRUD extends javax.swing.JFrame {
 
         jButton2.setText("ADD");
         jPanel1.add(jButton2);
-        jButton2.setBounds(510, 350, 53, 30);
+        jButton2.setBounds(473, 350, 90, 30);
 
         jTabbedPane1.addTab("Add Projects", jPanel1);
 
@@ -209,11 +211,11 @@ public class projectCRUD extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton5);
-        jButton5.setBounds(20, 400, 59, 30);
+        jButton5.setBounds(20, 400, 70, 30);
 
         jButton6.setText("Update");
         jPanel3.add(jButton6);
-        jButton6.setBounds(160, 400, 67, 30);
+        jButton6.setBounds(127, 400, 100, 30);
 
         jTabbedPane1.addTab("Update Projects", jPanel3);
 

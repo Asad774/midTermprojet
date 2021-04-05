@@ -126,7 +126,7 @@ public class studentCRUD extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(100, 343, 59, 40);
+        jButton1.setBounds(100, 343, 90, 40);
 
         jButton2.setText("ADD");
         jPanel1.add(jButton2);
@@ -150,7 +150,7 @@ public class studentCRUD extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(233, 0, 452, 459);
+        jScrollPane1.setBounds(330, 0, 452, 459);
 
         jLabel5.setText("ID of the student to be deleted");
         jPanel2.add(jLabel5);
@@ -165,11 +165,11 @@ public class studentCRUD extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(10, 350, 70, 40);
+        jButton3.setBounds(30, 220, 70, 40);
 
         jButton4.setText("Delete");
         jPanel2.add(jButton4);
-        jButton4.setBounds(123, 350, 70, 40);
+        jButton4.setBounds(180, 220, 70, 40);
 
         jTabbedPane1.addTab("Delete students", jPanel2);
 
@@ -189,7 +189,7 @@ public class studentCRUD extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable2);
 
         jPanel5.add(jScrollPane2);
-        jScrollPane2.setBounds(233, 0, 452, 459);
+        jScrollPane2.setBounds(330, 0, 452, 459);
 
         jLabel6.setText("ID of the student to be update");
         jPanel5.add(jLabel6);
@@ -203,7 +203,7 @@ public class studentCRUD extends javax.swing.JFrame {
 
         jLabel8.setText("New ID");
         jPanel5.add(jLabel8);
-        jLabel8.setBounds(10, 170, 60, 20);
+        jLabel8.setBounds(10, 180, 60, 20);
 
         jLabel9.setText("New session");
         jPanel5.add(jLabel9);
@@ -220,11 +220,11 @@ public class studentCRUD extends javax.swing.JFrame {
             }
         });
         jPanel5.add(jButton5);
-        jButton5.setBounds(30, 400, 59, 23);
+        jButton5.setBounds(9, 383, 80, 40);
 
         jButton6.setText("UPDATE");
         jPanel5.add(jButton6);
-        jButton6.setBounds(140, 400, 71, 23);
+        jButton6.setBounds(121, 383, 90, 40);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C" }));
         jPanel5.add(jComboBox2);
@@ -232,9 +232,9 @@ public class studentCRUD extends javax.swing.JFrame {
         jPanel5.add(jTextField6);
         jTextField6.setBounds(80, 240, 150, 30);
         jPanel5.add(jTextField7);
-        jTextField7.setBounds(30, 190, 190, 30);
+        jTextField7.setBounds(80, 180, 190, 30);
         jPanel5.add(jTextField8);
-        jTextField8.setBounds(30, 140, 190, 30);
+        jTextField8.setBounds(80, 120, 190, 30);
 
         jTabbedPane1.addTab("Update students", jPanel5);
 
@@ -242,11 +242,11 @@ public class studentCRUD extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
         );
 
         pack();
