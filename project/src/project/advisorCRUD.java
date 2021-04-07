@@ -5,6 +5,8 @@
  */
 package project;
 
+import java.awt.Color;
+
 /**
  *
  * @author muzammal computer
@@ -43,6 +45,7 @@ public class advisorCRUD extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -50,6 +53,7 @@ public class advisorCRUD extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -67,59 +71,113 @@ public class advisorCRUD extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
+        jPanel6 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(255, 0, 0));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "computer science", "computerengineering", "mechanical engineering", "civil engineering", "information technology", "chemical engineering", "electrical engineering" }));
         jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(229, 229, 136, 20);
+        jComboBox1.setBounds(229, 219, 171, 30);
 
+        jComboBox2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(255, 0, 0));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BSC", "BS", "MS", "PHD" }));
         jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(229, 162, 136, 20);
+        jComboBox2.setBounds(230, 160, 136, 30);
 
+        jComboBox3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jComboBox3.setForeground(new java.awt.Color(255, 0, 0));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "lab assisstant", "lab incharge", "professor" }));
         jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(229, 301, 136, 20);
+        jComboBox3.setBounds(229, 291, 136, 30);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("BACK");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(156, 359, 93, 35);
+        jButton1.setBounds(139, 344, 110, 50);
 
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 204, 0));
         jButton2.setText("Add");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton2MouseExited(evt);
+            }
+        });
         jPanel1.add(jButton2);
-        jButton2.setBounds(297, 358, 90, 40);
+        jButton2.setBounds(300, 340, 100, 50);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("post");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(45, 301, 90, 20);
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Department");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(45, 225, 90, 29);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Qualification");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(45, 158, 90, 29);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Name of the advisor");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(45, 45, 97, 31);
+        jLabel5.setBounds(45, 45, 140, 31);
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("ID of the advisor");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(45, 98, 97, 28);
+        jLabel6.setBounds(45, 98, 120, 28);
         jPanel1.add(jTextField1);
         jTextField1.setBounds(229, 98, 136, 28);
         jPanel1.add(jTextField2);
         jTextField2.setBounds(229, 45, 136, 31);
+
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 410, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel4);
+        jPanel4.setBounds(0, 0, 770, 410);
 
         jTabbedPane1.addTab("Add Advisor", jPanel1);
 
@@ -141,13 +199,26 @@ public class advisorCRUD extends javax.swing.JFrame {
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(289, 0, 452, 402);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ID of the advisor to be deleted");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(10, 40, 190, 30);
+        jLabel1.setBounds(10, 40, 230, 30);
         jPanel2.add(jTextField3);
-        jTextField3.setBounds(100, 90, 150, 40);
+        jTextField3.setBounds(70, 90, 180, 40);
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 0, 0));
         jButton3.setText("BACK");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton3MouseExited(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -156,9 +227,37 @@ public class advisorCRUD extends javax.swing.JFrame {
         jPanel2.add(jButton3);
         jButton3.setBounds(40, 230, 90, 40);
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 204, 0));
         jButton4.setText("DELETED");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton4MouseExited(evt);
+            }
+        });
         jPanel2.add(jButton4);
         jButton4.setBounds(153, 230, 100, 40);
+
+        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel5.setForeground(new java.awt.Color(0, 153, 153));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 750, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 420, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel5);
+        jPanel5.setBounds(0, 0, 750, 420);
 
         jTabbedPane1.addTab("Delete Advisor", jPanel2);
 
@@ -180,22 +279,32 @@ public class advisorCRUD extends javax.swing.JFrame {
         jPanel3.add(jScrollPane2);
         jScrollPane2.setBounds(289, 0, 452, 402);
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Name of the advisor");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(10, 120, 97, 14);
+        jLabel7.setBounds(-3, 120, 120, 20);
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("ID of the advisor");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(10, 160, 81, 14);
+        jLabel8.setBounds(0, 160, 110, 20);
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Qualification");
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(10, 200, 59, 14);
+        jLabel9.setBounds(10, 200, 90, 30);
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Department");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(10, 250, 57, 14);
+        jLabel10.setBounds(10, 240, 90, 30);
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("post");
         jPanel3.add(jLabel11);
         jLabel11.setBounds(10, 300, 70, 30);
@@ -204,36 +313,82 @@ public class advisorCRUD extends javax.swing.JFrame {
         jPanel3.add(jTextField5);
         jTextField5.setBounds(120, 160, 170, 20);
 
+        jComboBox4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox4.setForeground(new java.awt.Color(255, 0, 0));
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BSC", "BS", "MS", "PHD" }));
         jPanel3.add(jComboBox4);
-        jComboBox4.setBounds(120, 200, 80, 20);
+        jComboBox4.setBounds(120, 200, 80, 21);
 
+        jComboBox5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox5.setForeground(new java.awt.Color(255, 0, 0));
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "computer science", "computerengineering", "mechanical engineering", "civil engineering", "information technology", "chemical engineering", "electrical engineering" }));
         jPanel3.add(jComboBox5);
-        jComboBox5.setBounds(120, 240, 136, 20);
+        jComboBox5.setBounds(120, 240, 171, 30);
 
+        jComboBox6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox6.setForeground(new java.awt.Color(255, 0, 0));
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "lab assisstant", "lab incharge", "professor" }));
         jPanel3.add(jComboBox6);
-        jComboBox6.setBounds(120, 300, 90, 20);
+        jComboBox6.setBounds(120, 290, 120, 30);
 
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 0, 0));
         jButton5.setText("Back");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton5MouseExited(evt);
+            }
+        });
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         jPanel3.add(jButton5);
-        jButton5.setBounds(50, 363, 80, 30);
+        jButton5.setBounds(30, 353, 100, 40);
 
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 204, 0));
         jButton6.setText("update");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton6MouseExited(evt);
+            }
+        });
         jPanel3.add(jButton6);
-        jButton6.setBounds(157, 363, 90, 30);
+        jButton6.setBounds(157, 353, 90, 40);
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("ID of the advisor to be update");
         jPanel3.add(jLabel12);
         jLabel12.setBounds(10, 40, 190, 30);
         jPanel3.add(jTextField6);
         jTextField6.setBounds(110, 70, 150, 40);
+
+        jPanel6.setBackground(new java.awt.Color(0, 153, 153));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 740, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 410, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(jPanel6);
+        jPanel6.setBounds(0, 0, 740, 410);
 
         jTabbedPane1.addTab("Update Advisor", jPanel3);
 
@@ -241,9 +396,7 @@ public class advisorCRUD extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,6 +426,78 @@ public class advisorCRUD extends javax.swing.JFrame {
         committeeMenu n= new committeeMenu();
         n.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        // Mouse Entered.
+        jButton1.setBackground(new Color(255,0,0));
+        jButton1.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
+        // Mouse Entered.
+        jButton3.setBackground(new Color(255,0,0));
+        jButton3.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_jButton3MouseEntered
+
+    private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
+        // Mouse Entered.
+        jButton5.setBackground(new Color(255,0,0));
+        jButton5.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_jButton5MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        // Mouse Existed:
+        jButton1.setBackground(new Color(255,255,255));
+        jButton1.setForeground(new Color(255,0,0));
+    }//GEN-LAST:event_jButton1MouseExited
+
+    private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
+        // Mouse Existed:
+        jButton3.setBackground(new Color(255,255,255));
+        jButton3.setForeground(new Color(255,0,0));
+    }//GEN-LAST:event_jButton3MouseExited
+
+    private void jButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseExited
+        // Mouse Existed:
+        jButton5.setBackground(new Color(255,255,255));
+        jButton5.setForeground(new Color(255,0,0));
+    }//GEN-LAST:event_jButton5MouseExited
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        // Mouse Entered.
+        jButton2.setBackground(new Color(0,204,0));
+        jButton2.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void jButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseEntered
+        // Mouse Entered.
+        jButton4.setBackground(new Color(0,204,0));
+        jButton4.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_jButton4MouseEntered
+
+    private void jButton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseEntered
+        // Mouse Entered.
+        jButton6.setBackground(new Color(0,204,0));
+        jButton6.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_jButton6MouseEntered
+
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        // Mouse Exited.
+        jButton2.setBackground(new Color(255,255,255));
+        jButton2.setForeground(new Color(0,204,0));
+    }//GEN-LAST:event_jButton2MouseExited
+
+    private void jButton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseExited
+        // Mouse Exited.
+        jButton4.setBackground(new Color(255,255,255));
+        jButton4.setForeground(new Color(0,204,0));
+    }//GEN-LAST:event_jButton4MouseExited
+
+    private void jButton6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseExited
+        // Mouse Exited.
+        jButton6.setBackground(new Color(255,255,255));
+        jButton6.setForeground(new Color(0,204,0));
+    }//GEN-LAST:event_jButton6MouseExited
 
     /**
      * @param args the command line arguments
@@ -337,6 +562,9 @@ public class advisorCRUD extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;

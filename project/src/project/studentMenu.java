@@ -5,8 +5,11 @@
  */
 package project;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
-
+//Asad
+//ullah
+//bhatti
 /**
  *
  * @author muzammal computer
@@ -36,15 +39,17 @@ public class studentMenu extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jButton7 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,7 +63,18 @@ public class studentMenu extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(160, 170, 188, 50);
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 0, 0));
         jButton3.setText("BACK");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton3MouseExited(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -66,6 +82,22 @@ public class studentMenu extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3);
         jButton3.setBounds(70, 270, 89, 43);
+
+        jPanel6.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 370, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel6);
+        jPanel6.setBounds(0, 0, 450, 370);
 
         jTabbedPane1.addTab("Student's Group", jPanel1);
 
@@ -79,7 +111,18 @@ public class studentMenu extends javax.swing.JFrame {
         jPanel2.add(jButton5);
         jButton5.setBounds(109, 53, 188, 54);
 
+        jButton9.setBackground(new java.awt.Color(255, 255, 255));
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(255, 0, 0));
         jButton9.setText("BACK");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton9MouseExited(evt);
+            }
+        });
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -88,58 +131,75 @@ public class studentMenu extends javax.swing.JFrame {
         jPanel2.add(jButton9);
         jButton9.setBounds(48, 257, 82, 40);
 
-        jButton10.setBackground(new java.awt.Color(0, 0, 0));
-        jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setText("?");
-        jButton10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jButton10MouseMoved(evt);
-            }
-        });
-        jPanel2.add(jButton10);
-        jButton10.setBounds(300, 60, 40, 50);
+        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 370, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel5);
+        jPanel5.setBounds(0, 0, 450, 370);
 
         jTabbedPane1.addTab("Project", jPanel2);
 
-        jButton6.setText("View Assessments & results");
+        jPanel3.setLayout(null);
 
-        jButton7.setText("View Assessments");
-
+        jButton8.setBackground(new java.awt.Color(255, 255, 255));
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 0, 0));
         jButton8.setText("BACK");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton8MouseExited(evt);
+            }
+        });
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton8);
+        jButton8.setBounds(70, 242, 87, 48);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(89, Short.MAX_VALUE))
+        jPanel4.setBackground(new java.awt.Color(255, 0, 0));
+
+        jButton7.setText("View Assessments");
+
+        jButton6.setText("View Assessments & results");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(39, 39, 39)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
+
+        jPanel3.add(jPanel4);
+        jPanel4.setBounds(0, 0, 450, 370);
 
         jTabbedPane1.addTab("Assessments", jPanel3);
 
@@ -147,11 +207,11 @@ public class studentMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
         );
 
         pack();
@@ -178,10 +238,41 @@ public class studentMenu extends javax.swing.JFrame {
         y.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton10MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseMoved
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null,"Select one of the projects \n provided","Instruction",2);
-    }//GEN-LAST:event_jButton10MouseMoved
+    private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
+        // Mouse Entered.
+        jButton3.setBackground(new Color(255,0,0));
+        jButton3.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_jButton3MouseEntered
+
+    private void jButton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseEntered
+        // Mouse Entered.
+        jButton9.setBackground(new Color(255,0,0));
+        jButton9.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_jButton9MouseEntered
+
+    private void jButton8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseEntered
+        // Mouse Entered.
+        jButton8.setBackground(new Color(255,0,0));
+        jButton8.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_jButton8MouseEntered
+
+    private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
+        // Mouse Existed:
+        jButton3.setBackground(new Color(255,255,255));
+        jButton3.setForeground(new Color(255,0,0));
+    }//GEN-LAST:event_jButton3MouseExited
+
+    private void jButton9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseExited
+        // Mouse Existed:
+        jButton9.setBackground(new Color(255,255,255));
+        jButton9.setForeground(new Color(255,0,0));
+    }//GEN-LAST:event_jButton9MouseExited
+
+    private void jButton8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseExited
+        // Mouse Existed:
+        jButton8.setBackground(new Color(255,255,255));
+        jButton8.setForeground(new Color(255,0,0));
+    }//GEN-LAST:event_jButton8MouseExited
 
     /**
      * @param args the command line arguments
@@ -220,7 +311,6 @@ public class studentMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -232,6 +322,9 @@ public class studentMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
