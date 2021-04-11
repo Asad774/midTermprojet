@@ -45,13 +45,13 @@ public class AssessmentCRUD extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -159,8 +159,31 @@ public class AssessmentCRUD extends javax.swing.JFrame {
         jTabbedPane1.addTab("Add Assessments", jPanel1);
 
         jPanel2.setLayout(null);
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(106, 84, 198, 27);
+
+        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel5.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Title of the assessment to be deleted");
+        jPanel5.add(jLabel1);
+        jLabel1.setBounds(30, 40, 243, 30);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Title", "Marks", "Deadline"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel5.add(jScrollPane1);
+        jScrollPane1.setBounds(300, 0, 452, 402);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -179,8 +202,8 @@ public class AssessmentCRUD extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
-        jButton1.setBounds(63, 202, 86, 37);
+        jPanel5.add(jButton1);
+        jButton1.setBounds(20, 230, 86, 37);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -194,33 +217,10 @@ public class AssessmentCRUD extends javax.swing.JFrame {
                 jButton2MouseExited(evt);
             }
         });
-        jPanel2.add(jButton2);
-        jButton2.setBounds(167, 202, 160, 37);
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Title", "Marks", "Deadline"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(359, 0, 452, 402);
-
-        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel5.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Title of the assessment to be deleted");
-        jPanel5.add(jLabel1);
-        jLabel1.setBounds(30, 40, 243, 30);
+        jPanel5.add(jButton2);
+        jButton2.setBounds(140, 230, 160, 37);
+        jPanel5.add(jTextField1);
+        jTextField1.setBounds(80, 90, 198, 27);
 
         jPanel2.add(jPanel5);
         jPanel5.setBounds(0, 0, 830, 450);

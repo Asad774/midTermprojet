@@ -93,7 +93,7 @@ public class projectCRUD extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Link of PDF of roject");
+        jLabel4.setText("Link of PDF of project");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(75, 255, 140, 35);
         jPanel1.add(jTextField1);
@@ -217,7 +217,7 @@ public class projectCRUD extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("ID of the project to be deleted");
+        jLabel5.setText("Title of the project to be deleted");
         jPanel2.add(jLabel5);
         jLabel5.setBounds(10, 60, 210, 40);
         jPanel2.add(jTextField4);
@@ -261,7 +261,7 @@ public class projectCRUD extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("ID of the project to be updated");
+        jLabel6.setText("Title of the project to be updated");
         jPanel3.add(jLabel6);
         jLabel6.setBounds(10, 20, 210, 40);
         jPanel3.add(jTextField5);

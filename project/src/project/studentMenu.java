@@ -83,7 +83,7 @@ public class studentMenu extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(70, 270, 89, 43);
 
-        jPanel6.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel6.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -131,7 +131,7 @@ public class studentMenu extends javax.swing.JFrame {
         jPanel2.add(jButton9);
         jButton9.setBounds(48, 257, 82, 40);
 
-        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -171,7 +171,7 @@ public class studentMenu extends javax.swing.JFrame {
         jPanel3.add(jButton8);
         jButton8.setBounds(70, 242, 87, 48);
 
-        jPanel4.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
         jButton7.setText("View Assessments");
 

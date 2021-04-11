@@ -146,7 +146,7 @@ public class frame1 extends javax.swing.JFrame {
         jPanel3.add(jButton5);
         jButton5.setBounds(30, 240, 180, 60);
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);

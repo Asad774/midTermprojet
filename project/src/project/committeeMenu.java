@@ -61,7 +61,7 @@ public class committeeMenu extends javax.swing.JFrame {
         jLabel2.setBounds(376, 11, 341, 93);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 818, 187);
+        jPanel1.setBounds(0, 0, 0, 0);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -165,7 +165,7 @@ public class committeeMenu extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(66, 437, 144, 46);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -175,11 +175,11 @@ public class committeeMenu extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
+            .addGap(0, 530, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 820, 510);
+        jPanel2.setBounds(0, -20, 820, 530);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

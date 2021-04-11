@@ -51,15 +51,15 @@ public class advisorMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Evaluate assessments");
         jPanel1.add(jButton1);
         jButton1.setBounds(171, 44, 180, 43);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("View assessments");
         jPanel1.add(jButton2);
         jButton2.setBounds(171, 120, 180, 45);
 
-        jButton3.setText("jButton3");
+        jButton3.setText("View results");
         jPanel1.add(jButton3);
         jButton3.setBounds(171, 193, 180, 48);
 
@@ -83,7 +83,7 @@ public class advisorMenu extends javax.swing.JFrame {
         jPanel1.add(jButton4);
         jButton4.setBounds(59, 259, 76, 47);
 
-        jPanel6.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel6.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -127,7 +127,7 @@ public class advisorMenu extends javax.swing.JFrame {
         jPanel2.add(jButton8);
         jButton8.setBounds(140, 100, 202, 50);
 
-        jPanel5.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -171,7 +171,7 @@ public class advisorMenu extends javax.swing.JFrame {
         jPanel3.add(jButton7);
         jButton7.setBounds(130, 110, 199, 53);
 
-        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
