@@ -237,11 +237,12 @@ public class committeeMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         //this.setVisible(false);
         studentCRUD s = new studentCRUD();
+        s.showAll1();
+        s.showAll2();
         s.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         //this.setVisible(false);
         projectCRUD s = new projectCRUD();
         s.setVisible(true);

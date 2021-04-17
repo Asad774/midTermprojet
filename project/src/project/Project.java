@@ -19,6 +19,9 @@ public class Project {
         containsList r =containsList.getInstance();
         r.loadMembers();
         r.loadUNIStudents();
+        r.loadStudents();
+        r.loadAdvisors();
+        
         frame1 s = new frame1();
         s.setVisible(true);
     }

@@ -6,7 +6,9 @@
 package project;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,7 +22,7 @@ public class studentCRUD extends javax.swing.JFrame {
     public studentCRUD() {
         initComponents();
         
-        setSize(800,510);
+        setSize(870,510);
         setLocation(340,130);
     }
 
@@ -196,7 +198,7 @@ public class studentCRUD extends javax.swing.JFrame {
         jLabel1.setBounds(0, 60, 170, 30);
 
         jPanel1.add(jPanel6);
-        jPanel6.setBounds(0, 0, 820, 450);
+        jPanel6.setBounds(0, 0, 850, 450);
 
         jTabbedPane1.addTab("Add students", jPanel1);
 
@@ -204,19 +206,16 @@ public class studentCRUD extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Registration", "ID", "Session", "Section"
+                "Registration", "ID", "Section", "Session"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(330, 0, 452, 459);
+        jScrollPane1.setBounds(330, 0, 510, 459);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -258,6 +257,11 @@ public class studentCRUD extends javax.swing.JFrame {
                 jButton4MouseExited(evt);
             }
         });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton4);
         jButton4.setBounds(170, 220, 100, 40);
 
@@ -267,7 +271,7 @@ public class studentCRUD extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,7 +279,7 @@ public class studentCRUD extends javax.swing.JFrame {
         );
 
         jPanel2.add(jPanel7);
-        jPanel7.setBounds(0, 0, 810, 440);
+        jPanel7.setBounds(0, 0, 840, 440);
 
         jTabbedPane1.addTab("Delete students", jPanel2);
 
@@ -283,19 +287,16 @@ public class studentCRUD extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Registration", "ID", "Session", "Section"
+                "Registration", "ID", "Section", "Session"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
 
         jPanel5.add(jScrollPane2);
-        jScrollPane2.setBounds(330, 0, 452, 459);
+        jScrollPane2.setBounds(330, 0, 510, 459);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -347,6 +348,11 @@ public class studentCRUD extends javax.swing.JFrame {
                 jButton6MouseExited(evt);
             }
         });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         jPanel5.add(jButton6);
         jButton6.setBounds(150, 370, 120, 40);
 
@@ -383,7 +389,7 @@ public class studentCRUD extends javax.swing.JFrame {
         jPanel8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 100, 30));
 
         jPanel5.add(jPanel8);
-        jPanel8.setBounds(0, 0, 810, 450);
+        jPanel8.setBounds(0, 0, 840, 450);
 
         jTabbedPane1.addTab("Update students", jPanel5);
 
@@ -391,9 +397,7 @@ public class studentCRUD extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -500,10 +504,11 @@ public class studentCRUD extends javax.swing.JFrame {
         ////////////////////////////////////////////
         
         ///////////////////////////////////////////
-        if (validregistration(jTextField1.getText()))  
+        Students s = new Students();
+        if (s.matchUNIRegistration(jTextField1.getText()))  
       {
           
-      if (validEmailAdress(jTextField2.getText()))  
+      if (s.matchUNIStudent(jTextField2.getText()))  
       {
           if (validatePassword(jTextField6.getText()))  
           {
@@ -511,13 +516,23 @@ public class studentCRUD extends javax.swing.JFrame {
            {
               if(!jComboBox1.getSelectedItem().equals(null))
            {
-             Students s = new Students();
+             
              s.setName(jTextField1.getText());
              s.setID(jTextField2.getText());
              s.setPassword(jTextField6.getText());
              s.setsession(jComboBox4.getSelectedItem().toString());
              s.setSection(jComboBox1.getSelectedItem().toString());
-             s.addStudent(s);
+             if(s.matchStudent(jTextField2.getText()) || s.matchRegistration(jTextField1.getText()))
+             {
+                JOptionPane.showMessageDialog(null,"Already present ","Wrong",0);
+             }
+             else
+             {
+                 s.addStudent(s);
+                 jTextField1.setText("");
+                 jTextField2.setText("");
+                 jTextField6.setText("");
+             }
            } 
            }
           }
@@ -537,6 +552,140 @@ public class studentCRUD extends javax.swing.JFrame {
       }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+       Students s = new Students(); 
+      if(s.matchStudent(jTextField4.getText()))
+             {
+              s.deleteStudents(jTextField4.getText());
+              jTextField4.setText("");
+             }
+             else
+             {
+              JOptionPane.showMessageDialog(null,"Not Found ","Wrong",0);
+             }   
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+      Students s = new Students(); 
+      if(s.matchStudent(jTextField5.getText()))
+    {
+        if (s.matchUNIRegistration(jTextField8.getText()))  
+         {
+          
+      if (s.matchUNIStudent(jTextField7.getText()))  
+         {
+          if (validatePassword(jTextField3.getText()))  
+          {
+           if(!jComboBox3.getSelectedItem().equals(null))
+           {
+              if(!jComboBox2.getSelectedItem().equals(null))
+           {
+             
+             s.setName(jTextField8.getText());
+             s.setID(jTextField7.getText());
+             s.setPassword(jTextField3.getText());
+             s.setsession(jComboBox3.getSelectedItem().toString());
+             s.setSection(jComboBox2.getSelectedItem().toString());
+             if(s.matchStudent(jTextField2.getText()) || s.matchRegistration(jTextField1.getText()))
+             {
+                JOptionPane.showMessageDialog(null,"Already present ","Wrong",0);
+             }
+             else
+             {
+                 s.updateStudents(jTextField5.getText(),s);
+                 jTextField3.setText("");
+                 jTextField7.setText("");
+                 jTextField8.setText("");
+                 jTextField5.setText("");
+             }
+           } 
+           }
+          }
+           else
+           {
+             JOptionPane.showMessageDialog(null,"Password is not valid","In valid",0);
+           }
+      }
+      else
+      {
+       JOptionPane.showMessageDialog(null,"Email ID is not valid","In valid",0);   
+      }
+      }
+      else
+      {
+       JOptionPane.showMessageDialog(null,"Registration no. is not valid","In valid",0);   
+      }  
+             }
+             else
+             {
+              JOptionPane.showMessageDialog(null,"Not Found ","Wrong",0);
+             }  
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+   
+public void showAll1()
+{
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.studentlist.size(); i++)
+      {
+        Students f =(Students)t.studentlist.get(i);
+        addRow1(f.getName(), f.getID(), f.getSection(), f.getsession());
+      } 
+}
+
+public void showAll2()
+{
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.studentlist.size(); i++)
+      {
+        Students f =(Students)t.studentlist.get(i);
+        addRow2(f.getName(), f.getID(), f.getSection() , f.getsession());
+      } 
+}
+ 
+   public ArrayList Liststudent(String Name, String email, String section ,String session){
+    ArrayList<studentData> list = new ArrayList<studentData>();
+    studentData u1 = new studentData(Name, email, section,session);
+    list.add(u1);
+ 
+    return list;
+     } 
+    
+    
+ public void addRow1(String Name, String email, String section,String session)
+ {
+  DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+ ArrayList <studentData> list = Liststudent(Name, email,section , session);
+ Object rowData[]= new Object[4];
+ for (int i =0; i<list.size(); i++)
+ {
+ rowData[0]= list.get(i).name;
+ rowData[1]= list.get(i).ID;
+ rowData[2]= list.get(i).section;
+ rowData[3]= list.get(i).session;
+ model.addRow(rowData);
+ }
+ 
+ }
+ 
+  public void addRow2(String Name, String email,String section,String session)
+ {
+  DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+ ArrayList <studentData> list = Liststudent(Name, email,section , session);
+ Object rowData[]= new Object[4];
+ for (int i =0; i<list.size(); i++)
+ {
+ rowData[0]= list.get(i).name;
+ rowData[1]= list.get(i).ID;
+ rowData[2]= list.get(i).section;
+ rowData[3]= list.get(i).session;
+ model.addRow(rowData);
+ }
+ 
+ }
+    
+    
     
   public boolean validatePassword(String name)
   {

@@ -88,6 +88,62 @@ public boolean loadMembers()
     return flag;
   }
   
+public boolean saveStudents()
+  {
+    boolean flag = false;
+    try{
+      FileWriter myWriter = new FileWriter("Students.txt");
+      for(int i=0; i<studentlist.size(); i++)
+      {
+        Students d =(Students)studentlist.get(i);
+        myWriter.write(d.getName()+",");
+        myWriter.write(d.getID()+",");
+        myWriter.write(d.getPassword()+",");
+        myWriter.write(d.getSection()+",");
+        myWriter.write(d.getsession()+"\n");
+      } 
+      myWriter.close();
+      flag = true;
+    }
+      catch(IOException e){
+      System.out.println("an error occured");
+      flag = false;
+    }
+    
+    return flag;
+  }
+
+public boolean loadStudents()
+  {
+    boolean flag = false; 
+    try{
+      File myObj = new File("Students.txt");
+      Scanner myReader = new Scanner(myObj);
+      while(myReader.hasNextLine())
+      {
+        Students e = new Students();
+        String data =myReader.nextLine();
+        String [] str = data.split(",");
+        e.setName(str[0]);
+        e.setID(str[1]);
+        e.setPassword(str[2]);
+        e.setSection(str[3]);
+        e.setsession(str[4]);
+        studentlist.add(e);
+      }
+      myReader.close();
+      
+    }
+    catch(FileNotFoundException ex)
+    {
+      System.out.println("an error occured");
+      flag = false;
+    }
+    return flag;
+  }
+  
+
+
 
 public boolean loadUNIStudents()
   {
@@ -117,4 +173,62 @@ public boolean loadUNIStudents()
   }
   
 
+
+public boolean saveAdvisors()
+  {
+    boolean flag = false;
+    try{
+      FileWriter myWriter = new FileWriter("Advisors.txt");
+      for(int i=0; i<advisorlist.size(); i++)
+      {
+        Advisors d =(Advisors)advisorlist.get(i);
+        myWriter.write(d.getName()+",");
+        myWriter.write(d.getID()+",");
+        myWriter.write(d.getPassword()+",");
+        myWriter.write(d.getDepartment()+",");
+        myWriter.write(d.getQualification()+",");
+        myWriter.write(d.getPost()+"\n");
+      }
+      
+      myWriter.close();
+      flag = true;
+    }
+    catch(IOException e){
+      System.out.println("an error occured");
+      flag = false;
+    }
+    
+    return flag;
+  }
+
+public boolean loadAdvisors()
+  {
+    boolean flag = false; 
+    try{
+      File myObj = new File("Advisors.txt");
+      Scanner myReader = new Scanner(myObj);
+      while(myReader.hasNextLine())
+      {
+        Advisors e = new Advisors();
+        String data =myReader.nextLine();
+        String [] str = data.split(",");
+        e.setName(str[0]);
+        e.setID(str[1]);
+        e.setPassword(str[2]);
+        e.setDepartment(str[3]);
+        e.setQualification(str[4]);
+        e.setPost(str[5]);
+        advisorlist.add(e);
+      }
+      myReader.close();
+      
+    }
+    catch(FileNotFoundException ex)
+    {
+      System.out.println("an error occured");
+      flag = false;
+    }
+    return flag;
+  }
+  
 }
