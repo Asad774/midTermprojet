@@ -1,1 +1,5 @@
-samyan,samyan@gmail.com,samyan@123,computer science,PHD,professor
+samyan,samyan@gmail.com,samyan@123,computer science,MS,professor
+rabeeya,rabeeya@gmail.com,rabeeya@123,computer science,MS,lab incharge
+Ahsan,ahsan@gmail.com,ahsan@123,computer science,BS,lab assisstant
+Maida,maida@gmail.com,maida@123,computer science,MS,professor
+Bushra,bushra@gmail.com,bushra@123,computer science,MS,lab incharge

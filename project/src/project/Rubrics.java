@@ -11,14 +11,15 @@ import java.util.ArrayList;
  */
 public class Rubrics {
 private int noOfQue;  
-String[] Questions = new String[noOfQue];
-String[][] Options = new String[noOfQue][3];
+String[] Questions = new String[10];
 
-public void setOptions(String[][] Options, int l)
+public void setnoOfQue(int a)
 {
-     Options[l][0]="Good";
-     Options[l][1]="Average";
-     Options[l][2]="Bad";
+  noOfQue=a;  
 }
 
+public int getnoOfQue()
+{
+    return noOfQue;
+}
 }

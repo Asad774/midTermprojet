@@ -21,6 +21,8 @@ public class Project {
         r.loadUNIStudents();
         r.loadStudents();
         r.loadAdvisors();
+        r.loadProject();
+        
         
         frame1 s = new frame1();
         s.setVisible(true);

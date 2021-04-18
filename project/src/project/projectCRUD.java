@@ -6,6 +6,9 @@
 package project;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -33,17 +36,19 @@ public class projectCRUD extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -60,54 +65,20 @@ public class projectCRUD extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jButton5 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBox8 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Project Title");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(75, 86, 118, 34);
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Advisors");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(75, 138, 118, 31);
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Type of project");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(75, 200, 118, 28);
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Link of PDF of project");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(75, 255, 140, 35);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(235, 86, 189, 34);
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(235, 138, 189, 30);
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(240, 250, 190, 30);
-
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(255, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "research", "hybrid", "entrepreneurship" }));
-        jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(240, 200, 190, 30);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -141,20 +112,94 @@ public class projectCRUD extends javax.swing.JFrame {
                 jButton2MouseExited(evt);
             }
         });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2);
         jButton2.setBounds(473, 350, 90, 30);
 
         jPanel6.setBackground(new java.awt.Color(0, 153, 153));
 
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(255, 0, 0));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "research", "hybrid", "entrepreneurship" }));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Type of project");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Coadvisors");
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Industry Advisors");
+
+        jComboBox3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox3.setForeground(new java.awt.Color(255, 0, 0));
+
+        jComboBox4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox4.setForeground(new java.awt.Color(255, 0, 0));
+
+        jComboBox5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox5.setForeground(new java.awt.Color(255, 0, 0));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Project Title");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Advisors");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(358, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(153, 153, 153))
         );
 
         jPanel1.add(jPanel6);
@@ -186,13 +231,10 @@ public class projectCRUD extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Title", "Type", "Link"
+                "Title", "Type", "Main advisor"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -210,6 +252,11 @@ public class projectCRUD extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jButton4MouseExited(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
         jPanel2.add(jButton4);
@@ -245,13 +292,10 @@ public class projectCRUD extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Title", "Type", "Link"
+                "Title", "Type", "Main advisor"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -286,26 +330,6 @@ public class projectCRUD extends javax.swing.JFrame {
         jLabel8.setText("Advisors");
         jPanel3.add(jLabel8);
         jLabel8.setBounds(0, 170, 118, 31);
-        jPanel3.add(jTextField7);
-        jTextField7.setBounds(100, 170, 170, 30);
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Type of project");
-        jPanel3.add(jLabel9);
-        jLabel9.setBounds(0, 230, 118, 28);
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Link of PDF of project");
-        jPanel3.add(jLabel10);
-        jLabel10.setBounds(10, 290, 150, 35);
-        jPanel3.add(jTextField8);
-        jTextField8.setBounds(70, 330, 200, 40);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "research", "hybrid", "entrepreneurship" }));
-        jPanel3.add(jComboBox2);
-        jComboBox2.setBounds(100, 230, 170, 30);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -342,20 +366,81 @@ public class projectCRUD extends javax.swing.JFrame {
                 jButton6MouseExited(evt);
             }
         });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jComboBox2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(255, 0, 0));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "research", "hybrid", "entrepreneurship" }));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Type of project");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Coadvisors");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Ind advisors");
+
+        jComboBox6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox6.setForeground(new java.awt.Color(255, 0, 0));
+
+        jComboBox7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox7.setForeground(new java.awt.Color(255, 0, 0));
+
+        jComboBox8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jComboBox8.setForeground(new java.awt.Color(255, 0, 0));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(143, 143, 143)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(557, Short.MAX_VALUE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(522, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(399, Short.MAX_VALUE)
+                .addContainerGap(169, Short.MAX_VALUE)
+                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(jComboBox7))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
         );
@@ -480,6 +565,202 @@ public class projectCRUD extends javax.swing.JFrame {
         jButton6.setForeground(new Color(0,204,0));
     }//GEN-LAST:event_jButton6MouseExited
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       
+     if(validateName(jTextField1.getText()))
+     {
+        projectList v = new projectList();
+      if(v.matchProject(jTextField1.getText()))
+      {
+        JOptionPane.showMessageDialog(null,"Please add project \nwith new title","Error",0);  
+      }
+      else
+      {
+        if(jComboBox3.getSelectedItem().toString().equals(jComboBox4.getSelectedItem().toString()))
+        {
+         JOptionPane.showMessageDialog(null,"Your are entering same person as \n Advisor and co advisor","Error",0);    
+        }
+        else if(jComboBox4.getSelectedItem().toString().equals(jComboBox5.getSelectedItem().toString()))
+        {
+         JOptionPane.showMessageDialog(null,"Your are entering same person as \n coadvisor and industry advisor","Error",0);    
+        }
+        else if(jComboBox5.getSelectedItem().toString().equals(jComboBox3.getSelectedItem().toString()))
+        {
+         JOptionPane.showMessageDialog(null,"Your are entering same person as \n Advisor and industry advisor","Error",0);    
+        }
+        else
+        {
+             v.setTitle(jTextField1.getText());
+             v.setType(jComboBox1.getSelectedItem().toString());
+             v.Advisors[0]=jComboBox3.getSelectedItem().toString();
+             v.Advisors[1]=jComboBox4.getSelectedItem().toString();
+             v.Advisors[2]=jComboBox5.getSelectedItem().toString();
+             v.setoption("YES");
+             v.addproject(v);
+        }
+      }
+        
+     }
+              else
+              {
+                JOptionPane.showMessageDialog(null,"Make your Password secure","Error",0);   
+              }
+     
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        
+        
+     projectList v = new projectList();
+      if(v.matchProject(jTextField4.getText()))
+      {
+        v.deleteProject(jTextField4.getText());
+      }
+      else
+              {
+                JOptionPane.showMessageDialog(null,"project with such title is not present","Error",0);   
+              }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        
+        
+     projectList v = new projectList();
+      if(v.matchProject(jTextField5.getText()))
+      {
+        if(validateName(jTextField6.getText()))
+     {
+      
+        if(jComboBox6.getSelectedItem().toString().equals(jComboBox7.getSelectedItem().toString()))
+        {
+         JOptionPane.showMessageDialog(null,"Your are entering same person as \n Advisor and co advisor","Error",0);    
+        }
+        else if(jComboBox7.getSelectedItem().toString().equals(jComboBox8.getSelectedItem().toString()))
+        {
+         JOptionPane.showMessageDialog(null,"Your are entering same person as \n coadvisor and industry advisor","Error",0);    
+        }
+        else if(jComboBox8.getSelectedItem().toString().equals(jComboBox6.getSelectedItem().toString()))
+        {
+         JOptionPane.showMessageDialog(null,"Your are entering same person as \n Advisor and industry advisor","Error",0);    
+        }
+        else
+        {
+             v.setTitle(jTextField6.getText());
+             v.setType(jComboBox2.getSelectedItem().toString());
+             v.Advisors[0]=jComboBox6.getSelectedItem().toString();
+             v.Advisors[1]=jComboBox7.getSelectedItem().toString();
+             v.Advisors[2]=jComboBox8.getSelectedItem().toString();
+             v.setoption("YES");
+             v.updateProject(jTextField5.getText(),v);
+        }
+        
+     }
+              else
+              {
+                JOptionPane.showMessageDialog(null,"Make your Password secure","Error",0);   
+              }
+       
+      }
+      else
+              {
+                JOptionPane.showMessageDialog(null,"project with such title is not present","Error",0);   
+              }   
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+
+public boolean validateName(String name)
+  {
+    boolean flag = false;
+    int length = name.length();
+    for(int i=0; i<length ; i++)
+    {
+      if( (name.charAt(i)>='a' && name.charAt(i)<='z') || (name.charAt(i)>='A' && name.charAt(i)<='Z') || (name.charAt(i)==' ') ) 
+      {
+        flag = true;
+      }
+      else
+      {
+        flag = false;
+        break;
+      }
+    }
+    return flag;
+  }
+    
+    public void setAll()
+    {
+        containsList t = containsList.getInstance();
+        for(int i=0; i<t.advisorlist.size();i++)
+        {
+            Advisors f =(Advisors)t.advisorlist.get(i);
+            jComboBox3.addItem(f.getName());
+            jComboBox4.addItem(f.getName());
+            jComboBox5.addItem(f.getName());
+            jComboBox6.addItem(f.getName());
+            jComboBox7.addItem(f.getName());
+            jComboBox8.addItem(f.getName());
+        }
+    }
+    
+    
+public void showAll1()
+{
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.projectmainlist.size(); i++)
+      {
+        projectList f =(projectList)t.projectmainlist.get(i);
+        addRow1(f.getTitle(), f.getType(), f.Advisors[0]);
+      } 
+}
+
+public void showAll2()
+{
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.projectmainlist.size(); i++)
+      {
+        projectList f =(projectList)t.projectmainlist.get(i);
+        addRow2(f.getTitle(), f.getType(), f.Advisors[0]);
+      } 
+}
+ 
+   public ArrayList ListUser(String Name, String email, String Password){
+    ArrayList<userData> list = new ArrayList<userData>();
+    userData u1 = new userData(Name, email, Password);
+    list.add(u1);
+ 
+    return list;
+     } 
+    
+    
+ public void addRow1(String Name, String email, String Password)
+ {
+  DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+ ArrayList <userData> list = ListUser(Name, email, Password);
+ Object rowData[]= new Object[4];
+ for (int i =0; i<list.size(); i++)
+ {
+ rowData[0]= list.get(i).name;
+ rowData[1]= list.get(i).ID;
+ rowData[2]= list.get(i).Password;
+ model.addRow(rowData);
+ }
+ 
+ }
+ 
+  public void addRow2(String Name, String email, String Password)
+ {
+  DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+ ArrayList <userData> list = ListUser(Name, email, Password);
+ Object rowData[]= new Object[4];
+ for (int i =0; i<list.size(); i++)
+ {
+ rowData[0]= list.get(i).name;
+ rowData[1]= list.get(i).ID;
+ rowData[2]= list.get(i).Password;
+ model.addRow(rowData);
+ }
+ 
+ }
     /**
      * @param args the command line arguments
      */
@@ -524,11 +805,19 @@ public class projectCRUD extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -546,12 +835,8 @@ public class projectCRUD extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }

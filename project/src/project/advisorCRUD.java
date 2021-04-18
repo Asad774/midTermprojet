@@ -6,7 +6,9 @@
 package project;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -253,6 +255,11 @@ public class advisorCRUD extends javax.swing.JFrame {
                 jButton4MouseExited(evt);
             }
         });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton4);
         jButton4.setBounds(153, 230, 100, 40);
 
@@ -358,6 +365,11 @@ public class advisorCRUD extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jButton6MouseExited(evt);
+            }
+        });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
             }
         });
         jPanel3.add(jButton6);
@@ -572,7 +584,13 @@ public class advisorCRUD extends javax.swing.JFrame {
                if(!jComboBox3.getSelectedItem().equals(null))
            {
              Advisors x = new Advisors();
-             x.setName(jTextField2.getText());
+             if(x.matchAdvisor(jTextField1.getText()))
+             {
+             JOptionPane.showMessageDialog(null,"Person with such ID exists","Error",0); 
+             }  
+             else
+             { 
+              x.setName(jTextField2.getText());
              x.setID(jTextField1.getText());
              x.setPassword(jTextField7.getText());
              x.setDepartment(jComboBox1.getSelectedItem().toString());
@@ -581,6 +599,10 @@ public class advisorCRUD extends javax.swing.JFrame {
              x.addAdvisor(x);
              containsList t = containsList.getInstance();
              t.saveAdvisors();
+                 jTextField1.setText("");
+                 jTextField2.setText("");
+                 jTextField7.setText("");
+             }
            } 
            }
            } 
@@ -602,6 +624,75 @@ public class advisorCRUD extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Advisors x = new Advisors();
+        if(x.matchAdvisor(jTextField3.getText()))
+        {
+            x.deleteAdvisor(jTextField3.getText());
+        }  
+             else
+             { 
+                 JOptionPane.showMessageDialog(null,"Person with such ID does not exists","Error",0);
+             }  
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Advisors x = new Advisors();
+        if(x.matchAdvisor(jTextField6.getText()))
+        {
+        if(validateName(jTextField4.getText()))
+        {
+           if(validEmailAdress(jTextField5.getText()))
+        {
+              if(validatePassword(jTextField8.getText()))
+        {
+          if(!jComboBox4.getSelectedItem().equals(null))
+           {
+              if(!jComboBox5.getSelectedItem().equals(null))
+           {
+               if(!jComboBox6.getSelectedItem().equals(null))
+           {
+             x.setName(jTextField4.getText());
+             x.setID(jTextField5.getText());
+             x.setPassword(jTextField8.getText());
+             x.setDepartment(jComboBox5.getSelectedItem().toString());
+             x.setQualification(jComboBox4.getSelectedItem().toString());
+             x.setPost(jComboBox6.getSelectedItem().toString());
+             x.updateAdvisor(jTextField6.getText(),x);
+             containsList t = containsList.getInstance();
+             t.saveAdvisors();
+                 jTextField5.setText("");
+                 jTextField4.setText("");
+                 jTextField6.setText("");
+                 jTextField8.setText("");
+           
+           } 
+           }
+           } 
+        }
+              else
+              {
+                JOptionPane.showMessageDialog(null,"Make your Password secure","Error",0);   
+              }
+        }
+        else
+        {
+         JOptionPane.showMessageDialog(null,"ID is not valid","Error",0);   
+        } 
+           
+        }
+        else
+        {
+         JOptionPane.showMessageDialog(null,"Name is not valid","Error",0);   
+        }
+        
+             }  
+             else
+             { 
+                 JOptionPane.showMessageDialog(null,"Person with such ID does not exists","Error",0);
+             } 
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     
         
@@ -668,6 +759,67 @@ public class advisorCRUD extends javax.swing.JFrame {
 }
  
 
+ public void showAll1()
+{
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.advisorlist.size(); i++)
+      {
+        Advisors f =(Advisors)t.advisorlist.get(i);
+        addRow1(f.getName(), f.getID(), f.getDepartment(), f.getQualification());
+      } 
+}
+
+public void showAll2()
+{
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.advisorlist.size(); i++)
+      {
+       Advisors f =(Advisors)t.advisorlist.get(i);
+        addRow2(f.getName(), f.getID(), f.getDepartment() , f.getQualification());
+      } 
+}
+ 
+   public ArrayList Liststudent(String Name, String email, String section ,String session){
+    ArrayList<advisorData> list = new ArrayList<advisorData>();
+    advisorData u1 = new advisorData(Name, email, section,session);
+    list.add(u1);
+ 
+    return list;
+     } 
+    
+    
+ public void addRow1(String Name, String email, String department,String Qualification)
+ {
+  DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+ ArrayList <advisorData> advisorlist = Liststudent(Name, email,department ,Qualification);
+ Object rowData[]= new Object[4];
+ for (int i =0; i<advisorlist.size(); i++)
+ {
+ rowData[0]= advisorlist.get(i).Name;
+ rowData[1]= advisorlist.get(i).ID;
+ rowData[2]= advisorlist.get(i).department;
+ rowData[3]= advisorlist.get(i).qualification;
+ model.addRow(rowData);
+ }
+ 
+ }
+ 
+ 
+  public void addRow2(String Name, String email,String department ,String Qualification)
+ {
+  DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+ ArrayList <advisorData> advisorlist = Liststudent(Name, email, department  , Qualification);
+ Object rowData[]= new Object[4];
+ for (int i =0; i<advisorlist.size(); i++)
+ {
+ rowData[0]= advisorlist.get(i).Name;
+ rowData[1]= advisorlist.get(i).ID;
+ rowData[2]= advisorlist.get(i).department;
+ rowData[3]= advisorlist.get(i).qualification;
+ model.addRow(rowData);
+ }
+ 
+ }
     /**
      * @param args the command line arguments
      */

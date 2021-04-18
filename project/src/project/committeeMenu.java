@@ -245,6 +245,9 @@ public class committeeMenu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //this.setVisible(false);
         projectCRUD s = new projectCRUD();
+        s.setAll();
+        s.showAll1();
+        s.showAll2();
         s.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -252,6 +255,8 @@ public class committeeMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         //this.setVisible(false);
         advisorCRUD s = new advisorCRUD();
+        s.showAll1();
+        s.showAll2();
         s.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

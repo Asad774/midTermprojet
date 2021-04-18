@@ -34,6 +34,7 @@ ArrayList<Students>studentlist = new ArrayList<Students>();
 ArrayList<Students>UNIstudentlist = new ArrayList<Students>();
 ArrayList<Assessments>assessmentlist = new ArrayList<Assessments>(); 
 ArrayList<Advisors>advisorlist = new ArrayList<Advisors>();  
+ArrayList<projectList>projectmainlist = new ArrayList<projectList>(); 
 
 
 
@@ -219,6 +220,66 @@ public boolean loadAdvisors()
         e.setQualification(str[4]);
         e.setPost(str[5]);
         advisorlist.add(e);
+      }
+      myReader.close();
+      
+    }
+    catch(FileNotFoundException ex)
+    {
+      System.out.println("an error occured");
+      flag = false;
+    }
+    return flag;
+  }
+  
+
+
+
+public boolean saveProject()
+  {
+    boolean flag = false;
+    try{
+      FileWriter myWriter = new FileWriter("Projects.txt");
+      for(int i=0; i<projectmainlist.size(); i++)
+      {
+        projectList d =(projectList)projectmainlist.get(i);
+        myWriter.write(d.getTitle()+",");
+        myWriter.write(d.getType()+",");
+        myWriter.write(d.getoption()+",");
+        myWriter.write(d.Advisors[0]+",");
+        myWriter.write(d.Advisors[1]+",");
+        myWriter.write(d.Advisors[2]+"\n");
+      }
+      
+      myWriter.close();
+      flag = true;
+    }
+    catch(IOException e){
+      System.out.println("an error occured");
+      flag = false;
+    }
+    
+    return flag;
+  }
+
+public boolean loadProject()
+  {
+    boolean flag = false; 
+    try{
+      File myObj = new File("Projects.txt");
+      Scanner myReader = new Scanner(myObj);
+      while(myReader.hasNextLine())
+      {
+       projectList e = new projectList();
+        String data =myReader.nextLine();
+        String [] str = data.split(",");
+        e.setTitle(str[0]);
+        e.setType(str[1]);
+        e.setoption(str[2]);
+        e.Advisors[0]=str[3];
+        e.Advisors[1]=str[4];
+        e.Advisors[2]=str[5];
+        projectmainlist.add(e);
       }
       myReader.close();
       
