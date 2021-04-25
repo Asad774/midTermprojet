@@ -35,7 +35,7 @@ ArrayList<Students>UNIstudentlist = new ArrayList<Students>();
 ArrayList<Assessments>assessmentlist = new ArrayList<Assessments>(); 
 ArrayList<Advisors>advisorlist = new ArrayList<Advisors>();  
 ArrayList<projectList>projectmainlist = new ArrayList<projectList>(); 
-
+ArrayList<group>grouplist = new ArrayList<group>(); 
 
 
 public boolean saveMembers()
@@ -291,5 +291,125 @@ public boolean loadProject()
     }
     return flag;
   }
-  
+ 
+
+public boolean saveAssessments()
+  {
+    boolean flag = false;
+    try{
+      FileWriter myWriter = new FileWriter("Assessments.txt");
+      for(int i=0; i<assessmentlist.size(); i++)
+      {
+        Assessments d =(Assessments)assessmentlist.get(i);
+        myWriter.write(d.getTitle()+",");
+        myWriter.write(d.getdeadline()+",");
+        myWriter.write(d.getnoOfQue()+",");
+        myWriter.write(d.getTotalMarks()+",");
+        for(int j = 0; j<d.getnoOfQue() ;j++)
+        {
+        myWriter.write(d.Questions[j]+",");
+        }
+        myWriter.write("\n");
+      }  
+      myWriter.close();
+      flag = true;
+    }
+    catch(IOException e){
+      System.out.println("an error occured");
+      flag = false;
+    } 
+    return flag;
+  }
+
+
+
+public boolean loadAssessments()
+  {
+    boolean flag = false; 
+    try{
+      File myObj = new File("Assessments.txt");
+      Scanner myReader = new Scanner(myObj);
+      while(myReader.hasNextLine())
+      {
+       Assessments e = new Assessments();
+        String data =myReader.nextLine();
+        String [] str = data.split(",");
+        e.setTitle(str[0]);
+        e.setdeadline(str[1]);
+        e.setnoOfQue(Integer.parseInt(str[2]));
+        e.setTotalMarks(Integer.parseInt(str[3]));
+        int b=0;
+        for(int i=4; i<str.length; i++)
+        {
+            e.Questions[b]=str[i];
+            b=b+1;
+        }
+        assessmentlist.add(e);
+      }
+      myReader.close();
+      
+    }
+    catch(FileNotFoundException ex)
+    {
+      System.out.println("an error occured");
+      flag = false;
+    }
+    return flag;
+  }
+
+
+public boolean saveGroups()
+  {
+    boolean flag = false;
+    try{
+      FileWriter myWriter = new FileWriter("Groups.txt");
+      for(int i=0; i<grouplist.size(); i++)
+      {
+        group d =(group)grouplist.get(i);
+        for(int j = 0; j<5 ;j++)
+        {
+        myWriter.write(d.grouping[j]+",");
+        }
+        myWriter.write(d.getselectedProject()+"\n");
+      }  
+      myWriter.close();
+      flag = true;
+    }
+    catch(IOException e){
+      System.out.println("an error occured");
+      flag = false;
+    } 
+    return flag;
+  }
+
+
+
+public boolean loadGroups()
+  {
+    boolean flag = false; 
+    try{
+      File myObj = new File("Groups.txt");
+      Scanner myReader = new Scanner(myObj);
+      while(myReader.hasNextLine())
+      {
+         group e = new group();
+        String data =myReader.nextLine();
+        String [] str = data.split(",");
+        for(int i=0; i<5; i++)
+        {
+            e.grouping[i]=str[i];
+        }
+        e.setselectedProject(str[5]);
+        grouplist.add(e);
+      }
+      myReader.close();
+      
+    }
+    catch(FileNotFoundException ex)
+    {
+      System.out.println("an error occured");
+      flag = false;
+    }
+    return flag;
+  }
 }

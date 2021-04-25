@@ -112,7 +112,7 @@ public boolean matchRegistration(String s)
     for(int i=0; i<t.studentlist.size(); i++)
       {
         Students f =(Students)t.studentlist.get(i);
-        if(s.equals(f.getName()))
+        if(s.equals(f.getPassword()))
         {
          flag=true;
          

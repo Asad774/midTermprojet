@@ -22,7 +22,7 @@ public class studentMenu extends javax.swing.JFrame {
     public studentMenu() {
         initComponents();
         setLocation(340,100);
-        setSize(460,400);
+        setSize(640,480);
     }
 
     /**
@@ -36,15 +36,24 @@ public class studentMenu extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton8 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
@@ -55,13 +64,8 @@ public class studentMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jButton1.setText("Make group of Students");
-        jPanel1.add(jButton1);
-        jButton1.setBounds(160, 50, 188, 54);
-
-        jButton2.setText("View groups");
-        jPanel1.add(jButton2);
-        jButton2.setBounds(160, 170, 188, 50);
+        jPanel6.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -80,21 +84,55 @@ public class studentMenu extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(70, 270, 89, 43);
+        jPanel6.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 290, 89, 43));
 
-        jPanel6.setBackground(new java.awt.Color(0, 153, 153));
+        jButton2.setText("View groups");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 188, 50));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 410, Short.MAX_VALUE)
-        );
+        jButton1.setText("Make group of Students");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 188, 54));
+
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("?");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton5MouseEntered(evt);
+            }
+        });
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 20, 20));
+
+        jButton10.setBackground(new java.awt.Color(204, 204, 204));
+        jButton10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(255, 255, 255));
+        jButton10.setText("?");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton10MouseEntered(evt);
+            }
+        });
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 20, 20));
 
         jPanel1.add(jPanel6);
         jPanel6.setBounds(0, 0, 710, 410);
@@ -103,13 +141,13 @@ public class studentMenu extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
-        jButton4.setText("View selected Project");
-        jPanel2.add(jButton4);
-        jButton4.setBounds(109, 160, 188, 54);
+        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton5.setText("Select Projects");
-        jPanel2.add(jButton5);
-        jButton5.setBounds(109, 53, 188, 54);
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Select Project");
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 71, 141, 35));
 
         jButton9.setBackground(new java.awt.Color(255, 255, 255));
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -128,21 +166,43 @@ public class studentMenu extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton9);
-        jButton9.setBounds(48, 257, 82, 40);
+        jPanel5.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 292, 82, 40));
 
-        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
+        jTextField1.setEditable(false);
+        jPanel5.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 142, 211, 40));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 410, Short.MAX_VALUE)
-        );
+        jTextField2.setEditable(false);
+        jPanel5.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 216, 106, 35));
+
+        jTextField3.setEditable(false);
+        jPanel5.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 215, 96, 37));
+
+        jTextField4.setEditable(false);
+        jTextField4.setToolTipText("");
+        jPanel5.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 214, 106, 38));
+
+        jPanel5.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 71, 211, 35));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Selected project");
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 170, 40));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Advisors");
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 140, 30));
+
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 0, 204));
+        jButton4.setText("Select");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 73, 100, 30));
 
         jPanel2.add(jPanel5);
         jPanel5.setBounds(0, 0, 710, 410);
@@ -174,6 +234,11 @@ public class studentMenu extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
         jButton7.setText("View Assessments");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("View Assessments & results");
 
@@ -191,11 +256,11 @@ public class studentMenu extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(62, 62, 62)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
+                .addGap(47, 47, 47)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
 
         jPanel3.add(jPanel4);
@@ -274,6 +339,152 @@ public class studentMenu extends javax.swing.JFrame {
         jButton8.setForeground(new Color(255,0,0));
     }//GEN-LAST:event_jButton8MouseExited
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+     group g = new group();
+     containsList t = containsList.getInstance();
+     Students s = new Students();
+     if(!g.matchGroup(g.stu))
+     {
+     g.grouping[0]=g.stu;
+     int x=1;
+     for(int i=0; x<5; i++)
+     {
+      String h=JOptionPane.showInputDialog(null,"Enter the Id of your friend","Login",0);
+      if(s.matchUNIStudent(h))
+      {
+        if(s.matchStudent(h))
+      {
+        g.grouping[x]=h; 
+        x=x+1;
+        if(x==5)
+        {
+         t.grouplist.add(g);
+         t.saveGroups();
+        }
+        
+      }
+      else
+      {
+        String r =JOptionPane.showInputDialog(null,"Such student is present in your university \n"
+                                +"but is not signed in if you want to sign him Y/N","In valid",0); 
+        if(r.equals("Y") || r.equals("y"))
+        {
+            friendLogin a = new friendLogin();  
+            a.setVisible(true);
+            break;
+        }
+        else
+        {
+            
+        }
+      }  
+        
+      }
+      else
+      {
+        JOptionPane.showMessageDialog(null,"Such student is not present in your university","In valid",0);    
+      }
+      
+     } 
+     
+     }
+      else
+      {
+        JOptionPane.showMessageDialog(null,"Your group is already final","In valid",0);    
+      }
+     
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if(jComboBox1.getSelectedItem().toString().equals("Select"))
+        {
+            JOptionPane.showMessageDialog(null,"First select any project","Error",0); 
+        }
+        else
+        {
+            group t = new group();
+            if(t.matchProjects(t.stu))
+            {
+            t.selectProject(jComboBox1.getSelectedItem().toString(),t.stu);
+            }
+            else
+            {
+              JOptionPane.showMessageDialog(null,"You have already selected project","Error",0);    
+            }
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
+        
+     JOptionPane.showMessageDialog(null,"you have to add 4 signed in \n student at a time","Instructions",0); 
+    }//GEN-LAST:event_jButton5MouseEntered
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        group p = new group();
+        if(p.matchGroup(p.stu))
+        {
+         p.showbros(p.stu);   
+        }
+        else
+        {
+         JOptionPane.showMessageDialog(null,"Such student is not present in any group","In valid",0);   
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseEntered
+     JOptionPane.showMessageDialog(null,"This will show all the IDs in your group","Show",0); 
+    }//GEN-LAST:event_jButton10MouseEntered
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+     JOptionPane.showMessageDialog(null,"you have to add 4 signed in \n student at a time","Instructions",0);     
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+     JOptionPane.showMessageDialog(null,"This will show all the IDs in your group","Show",0);    
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    
+    public void setAll()
+    {
+        jComboBox1.addItem("Select");
+        containsList t = containsList.getInstance();
+        for(int i=0; i<t.projectmainlist.size();i++)
+        {
+            projectList f =(projectList)t.projectmainlist.get(i);
+            if(f.getoption().equals("YES"))
+            {
+            jComboBox1.addItem(f.getTitle());
+            }
+        }
+    }
+    
+    public void setData()
+    {
+        group z= new group();
+        if(z.matchGroup(z.stu))
+        {
+        containsList t = containsList.getInstance();
+        String a = z.doAll(z.stu);
+        for(int x=0; x<t.projectmainlist.size();x++)
+            {
+            projectList b =(projectList)t.projectmainlist.get(x);
+            if(a.equals(b.getTitle()))
+            {
+             jTextField1.setText(b.getTitle());
+             jTextField2.setText(b.Advisors[0]);
+             jTextField3.setText(b.Advisors[1]);
+             jTextField4.setText(b.Advisors[2]);
+            }
+            
+           }
+        
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -311,6 +522,7 @@ public class studentMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -319,6 +531,10 @@ public class studentMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -326,5 +542,9 @@ public class studentMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

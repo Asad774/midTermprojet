@@ -6,6 +6,8 @@
 package project;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,7 +21,7 @@ public class advisorMenu extends javax.swing.JFrame {
     public advisorMenu() {
         initComponents();
         setLocation(340,100);
-        setSize(460,400);
+        setSize(760,470);
     }
 
     /**
@@ -46,6 +48,8 @@ public class advisorMenu extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,7 +93,7 @@ public class advisorMenu extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGap(0, 750, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +101,7 @@ public class advisorMenu extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel6);
-        jPanel6.setBounds(0, 0, 630, 400);
+        jPanel6.setBounds(0, 0, 750, 400);
 
         jTabbedPane1.addTab("Assessments", jPanel1);
 
@@ -136,7 +140,7 @@ public class advisorMenu extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(353, Short.MAX_VALUE))
+                .addContainerGap(473, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,17 +151,20 @@ public class advisorMenu extends javax.swing.JFrame {
         );
 
         jPanel2.add(jPanel5);
-        jPanel5.setBounds(0, 0, 630, 400);
+        jPanel5.setBounds(0, 0, 750, 400);
 
         jTabbedPane1.addTab("Student's group", jPanel2);
 
         jPanel3.setLayout(null);
 
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel4.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("All projects assigned to this advisor");
+        jPanel4.add(jLabel1);
+        jLabel1.setBounds(10, 11, 267, 32);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -176,33 +183,24 @@ public class advisorMenu extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton6);
+        jButton6.setBounds(20, 235, 93, 44);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(353, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(121, 121, 121))
-        );
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title", "Type", "Main advisor"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel4.add(jScrollPane1);
+        jScrollPane1.setBounds(240, 0, 500, 400);
 
         jPanel3.add(jPanel4);
-        jPanel4.setBounds(0, 0, 630, 400);
+        jPanel4.setBounds(0, 0, 750, 400);
 
         jTabbedPane1.addTab("Projects", jPanel3);
 
@@ -210,7 +208,7 @@ public class advisorMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 754, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,6 +275,58 @@ public class advisorMenu extends javax.swing.JFrame {
         jButton6.setForeground(new Color(255,0,0));
     }//GEN-LAST:event_jButton6MouseExited
 
+    
+    public void showAll1()
+{
+    containsList t = containsList.getInstance();
+    AdvisorReal a = new AdvisorReal();
+    for(int i=0; i<t.projectmainlist.size(); i++)
+      {
+          
+        projectList f =(projectList)t.projectmainlist.get(i);
+        
+        String b=a.getRealName(a.adv);
+        if(f.Advisors[0].equals(b))
+        {
+        addRow1(f.getTitle(), f.getType(), f.Advisors[0]);
+        }
+        if(f.Advisors[1].equals(b))
+        {
+        addRow1(f.getTitle(), f.getType(), f.Advisors[1]);
+        }
+        if(f.Advisors[2].equals(b))
+        {
+        addRow1(f.getTitle(), f.getType(), f.Advisors[2]);
+        }
+      } 
+}
+    
+    
+    
+    public ArrayList ListUser(String Name, String email, String Password){
+    ArrayList<userData> list = new ArrayList<userData>();
+    userData u1 = new userData(Name, email, Password);
+    list.add(u1);
+ 
+    return list;
+     } 
+    
+    
+ public void addRow1(String Name, String email, String Password)
+ {
+  DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+ ArrayList <userData> list = ListUser(Name, email, Password);
+ Object rowData[]= new Object[4];
+ for (int i =0; i<list.size(); i++)
+ {
+ rowData[0]= list.get(i).name;
+ rowData[1]= list.get(i).ID;
+ rowData[2]= list.get(i).Password;
+ model.addRow(rowData);
+ }
+ 
+ }
+ 
     /**
      * @param args the command line arguments
      */
@@ -327,6 +377,8 @@ public class advisorMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

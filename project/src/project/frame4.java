@@ -6,6 +6,7 @@
 package project;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -177,10 +178,24 @@ public class frame4 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
+        Students f = new Students();
+        if(f.matchStudent(jTextField1.getText()) && f.matchRegistration(jPasswordField1.getText()))
+        {
         this.setVisible(false);
         studentMenu y = new studentMenu();
+        group g = new group();
+        g.stu=jTextField1.getText();
+        y.setAll();
+        y.setData();
         y.setVisible(true);
+        }
+        else
+        {
+            jTextField1.setText("");
+            jPasswordField1.setText("");
+            JOptionPane.showMessageDialog(null,"Credentials not found \n first sign in please","Wrong",0);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
@@ -196,10 +211,9 @@ public class frame4 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3MouseExited
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        studentMenu y = new studentMenu();
-        y.setVisible(true);
+        //this.setVisible(false);
+        friendLogin n = new friendLogin();
+        n.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered

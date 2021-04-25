@@ -1,1 +1,5 @@
-Project management,hybrid,YES,samyan,Maida,Bushra
+Project management,hybrid,no,samyan,Maida,Bushra
+artificial intelligence,research,YES,samyan,rabeeya,Ahsan
+Hotel mannagement,hybrid,YES,samyan,rabeeya,Ahsan
+Hospital mannagement,entrepreneurship,YES,samyan,Maida,Bushra
+Gourmet program,entrepreneurship,YES,samyan,rabeeya,Ahsan

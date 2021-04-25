@@ -208,6 +208,9 @@ public class memberMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         //this.setVisible(false);
         projectCRUD s = new projectCRUD();
+        s.setAll();
+        s.showAll1();
+        s.showAll2();
         s.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -227,6 +230,8 @@ public class memberMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         //this.setVisible(false);
         studentCRUD s = new studentCRUD();
+        s.showAll1();
+        s.showAll2();
         s.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -246,6 +251,8 @@ public class memberMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         //this.setVisible(false);
         advisorCRUD s = new advisorCRUD();
+        s.showAll1();
+        s.showAll2();
         s.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -265,6 +272,8 @@ public class memberMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         //this.setVisible(false);
         AssessmentCRUD s = new AssessmentCRUD();
+        s.showAll1();
+        s.showAll2();
         s.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 

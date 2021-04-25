@@ -1,2 +1,5 @@
 saad,saad@gmail.com,saad@123
 asad,asad@gmail.com,asad@123
+faizan,faizan@gmail.com,faizan@123
+rehan,rehan@gmail.com,rehan@123
+zeshan,zeshan@gmail.com,zeshan@123

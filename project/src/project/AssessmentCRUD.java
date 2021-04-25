@@ -62,13 +62,13 @@ public class AssessmentCRUD extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jTextField7 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jCalendar2 = new com.toedter.calendar.JCalendar();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -213,10 +213,7 @@ public class AssessmentCRUD extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Title", "Marks", "Deadline"
@@ -257,6 +254,11 @@ public class AssessmentCRUD extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jButton2MouseExited(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
         jPanel5.add(jButton2);
@@ -311,6 +313,11 @@ public class AssessmentCRUD extends javax.swing.JFrame {
                 jButton6MouseExited(evt);
             }
         });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton6);
         jButton6.setBounds(170, 380, 90, 40);
 
@@ -326,12 +333,6 @@ public class AssessmentCRUD extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("RUBRICS");
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
-
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Marks");
@@ -342,16 +343,21 @@ public class AssessmentCRUD extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Title", "Marks", "Deadline"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
+
+        jButton8.setForeground(new java.awt.Color(255, 0, 0));
+        jButton8.setText("Add Rubrics");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -367,27 +373,30 @@ public class AssessmentCRUD extends javax.swing.JFrame {
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)))
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jCalendar2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addGap(43, 43, 43)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(10, 10, 10)))
+                    .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -422,10 +431,6 @@ public class AssessmentCRUD extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -541,13 +546,16 @@ public class AssessmentCRUD extends javax.swing.JFrame {
             if(Integer.parseInt(jTextField4.getText())<=100)
             {
             if(a.check==1)  
-            {
+            {  
              a.setTitle(jTextField3.getText());
              a.setTotalMarks(Integer.parseInt(jTextField4.getText()));
              String g= jCalendar1.getDate().toString();
              a.setdeadline(g);
              a.setnoOfQue(a.questionNo);
              a.good(a);
+             a.addAssessment(a);
+             jTextField3.setText("");
+             jTextField4.setText("");
              a.check=0;
             }
             else
@@ -574,7 +582,11 @@ public class AssessmentCRUD extends javax.swing.JFrame {
         String[] arr=new String[b]; 
         for(int i=0; i<b; i++)
         {
-         arr[i]=JOptionPane.showInputDialog(null,"Enter Questuion"+(i+1),"Input",3);   
+         arr[i]=JOptionPane.showInputDialog(null,"Enter Questuion"+(i+1),"Input",3); 
+         if(arr[i].equals(""))
+         {
+             b=b+1;
+         }
         }
         t.copyKar(b,arr);
         t.check=1;
@@ -590,6 +602,92 @@ public class AssessmentCRUD extends javax.swing.JFrame {
                   JOptionPane.showMessageDialog(null,"Cant converted successfully","Error",0);  
                 }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Assessments a= new Assessments();
+        if(a.matchAssessments(jTextField1.getText()))
+        {
+         a.deleteAssessment(jTextField1.getText());   
+        }
+        else
+        {
+         JOptionPane.showMessageDialog(null,"Title is not present ","Wrong",0);   
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Assessments a = new  Assessments();
+           if(!a.matchAssessments(jTextField6.getText()))
+           {
+            JOptionPane.showMessageDialog(null,"Title is not present ","Wrong",0);   
+           }
+           else
+           {
+            if(validateName(jTextField7.getText())) 
+            {
+                
+            if(Integer.parseInt(jTextField9.getText())<=100)
+            {
+            if(a.check==1)  
+            {  
+             a.setTitle(jTextField7.getText());
+             a.setTotalMarks(Integer.parseInt(jTextField9.getText()));
+             String g= jCalendar2.getDate().toString();
+             a.setdeadline(g);
+             a.setnoOfQue(a.questionNo);
+             a.good(a);
+             a.updateAssessment(jTextField6.getText(),a);
+             jTextField6.setText("");
+             jTextField7.setText("");
+             jTextField9.setText("");
+             a.check=0;
+            }
+            else
+           {
+            JOptionPane.showMessageDialog(null,"First add the rubrics","Wrong",0);   
+           }
+            }
+            else
+           {
+            JOptionPane.showMessageDialog(null,"Cannot set marks more than 100 questions","Wrong",0);   
+           }
+            
+           }
+        }
+       
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+      Assessments t = new  Assessments();
+        String a =JOptionPane.showInputDialog(null,"Enter number of questions \n you want to add","Input",3);
+        try{
+        int b=Integer.parseInt(a);
+        if(b<=10)
+        {
+        String[] arr=new String[b]; 
+        for(int i=0; i<b; i++)
+        {
+         arr[i]=JOptionPane.showInputDialog(null,"Enter Questuion"+(i+1),"Input",3); 
+         if(arr[i].equals(""))
+         {
+             b=b+1;
+         }
+        }
+        t.copyKar(b,arr);
+        t.check=1;
+        }
+        else
+        {
+         JOptionPane.showMessageDialog(null,"Cannot add more than 10 questions","Wrong",0);    
+        }
+        
+        }
+        catch(Exception e)
+                {
+                  JOptionPane.showMessageDialog(null,"Cant converted successfully","Error",0);  
+                }
+        
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     
     
@@ -659,6 +757,7 @@ public class AssessmentCRUD extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private com.toedter.calendar.JCalendar jCalendar1;
     private com.toedter.calendar.JCalendar jCalendar2;
     private javax.swing.JLabel jLabel1;
@@ -687,7 +786,6 @@ public class AssessmentCRUD extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

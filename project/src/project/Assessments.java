@@ -4,6 +4,7 @@ This is the assessments information class
 package project;
 
 import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -78,6 +79,47 @@ public void good(Assessments a)
    a.Questions[i]=que[i];
  }
  
+}
+
+
+public void addAssessment(Assessments s)
+{
+    containsList t =containsList.getInstance();
+    t.assessmentlist.add(s);
+    t.saveAssessments();
+    JOptionPane.showMessageDialog(null,"Assessment is added","Alhammdulilah",3);
+}
+
+
+public void deleteAssessment(String s)
+{
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.assessmentlist.size(); i++)
+      {
+        Assessments f =(Assessments)t.assessmentlist.get(i);
+        if(s.equals(f.getTitle()))
+        {
+         t.assessmentlist.remove(i);
+         t.saveAssessments();
+         JOptionPane.showMessageDialog(null,"Assessment is deleted","confirmation",3);
+        }
+      }  
+}
+
+
+public void updateAssessment(String s , Assessments a)
+{
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.assessmentlist.size(); i++)
+      {
+        Assessments f =(Assessments)t.assessmentlist.get(i);
+        if(s.equals(f.getTitle()))
+        {
+         t.assessmentlist.set(i,a);
+         t.saveAssessments();
+         JOptionPane.showMessageDialog(null,"Assessment is updated","confirmation",3);
+        }
+      }  
 }
 
 }

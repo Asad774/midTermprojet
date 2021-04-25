@@ -116,4 +116,20 @@ public boolean matchAdvisor(String s)
 }
 
 
+public boolean matchpassword(String s)
+{
+    boolean flag=false;
+    containsList t = containsList.getInstance();
+    for(int i=0; i<t.advisorlist.size(); i++)
+      {
+        Advisors f =(Advisors)t.advisorlist.get(i);
+        if(s.equals(f.getPassword()))
+        {
+            flag=true;
+        }
+      } 
+    return flag;
+}
+
+
 }

@@ -22,7 +22,8 @@ public class Project {
         r.loadStudents();
         r.loadAdvisors();
         r.loadProject();
-        
+        r.loadAssessments();
+        r.loadGroups();
         
         frame1 s = new frame1();
         s.setVisible(true);
